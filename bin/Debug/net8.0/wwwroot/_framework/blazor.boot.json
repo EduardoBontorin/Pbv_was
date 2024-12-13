@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "WebAssemby-PickingByVoice",
   "resources": {
-    "hash": "sha256-ee4LrhpKGVVejwIzc46G+JFtwwDOhBQ+lsSGoQcJItY=",
+    "hash": "sha256-wNCOx+S1EZ9Fginpkfhxe+X/9dExBNm7OZCkpluFoVo=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.3ehrejkat6.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -256,10 +256,10 @@
       "mscorlib.wasm": "sha256-Gz8PyW2/fwihe5ul81OwmRUrU71r+KtbyRw6xlOGD+Q=",
       "netstandard.wasm": "sha256-jMTqIQzoDS810lyhZpMO5eEC36EzntXqSVn+2qwkOMQ=",
       "System.Private.CoreLib.wasm": "sha256-NFj5WE5VLP2LptZIRJCUIc1AMk06FmxpsSILfPISwAw=",
-      "WebAssemby-PickingByVoice.wasm": "sha256-e3VH7Hpx4icTpi37W+bOz1XcT86f/KNquxeo7m3scq0="
+      "WebAssemby-PickingByVoice.wasm": "sha256-LWN5zu9Zcmu3l+pMubcor+kLJGQj9VTIX90QscNwEXk="
     },
     "pdb": {
-      "WebAssemby-PickingByVoice.pdb": "sha256-Ozfq8z7qJIDRFgwicCiP3tHrPYvDc3Vjwtyw8gaFp/k="
+      "WebAssemby-PickingByVoice.pdb": "sha256-6/lWVugahAZpP1IVAnclTq+cUwjCUNImmAQbCQt+3bo="
     },
     "satelliteResources": {
       "cs": {

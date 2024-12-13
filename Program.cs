@@ -11,9 +11,4 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 
-
-
-
-var connString = "localhost,1433; Database = PickingByVoice; User ID = sa; Password = UrbemPassword123@; Trusted_Connection = False; TrustServerCertificate = True";
-
 await builder.Build().RunAsync();
