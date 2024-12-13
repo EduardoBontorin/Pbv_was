@@ -1,0 +1,5 @@
+C:\dev\WebAssemby-PickingByVoice\WebAssemby-PickingByVoice\publish\publish\web.config
+C:\dev\WebAssemby-PickingByVoice\WebAssemby-PickingByVoice\publish\publish\wwwroot\Data\Data.json
+C:\dev\WebAssemby-PickingByVoice\WebAssemby-PickingByVoice\publish\publish\wwwroot\sample-data\weather.json
+C:\dev\WebAssemby-PickingByVoice\WebAssemby-PickingByVoice\publish\publish\wwwroot\_framework\blazor.boot.json
+C:\dev\WebAssemby-PickingByVoice\WebAssemby-PickingByVoice\publish\web.config

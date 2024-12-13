@@ -1,0 +1,94 @@
+﻿@page "/conferir-uc"
+@using WebAssemby_PickingByVoice.Models
+@inject NavigationManager navManager
+@inject HttpClient Http
+
+<PageTitle>Conferir UC</PageTitle>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página SAP</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="content">
+        <h3>Conferir UC</h3>
+        <div class="notification" style="color: red;" hidden="@(string.IsNullOrEmpty(MensagemErro))">
+            <p id="msgErro">@MensagemErro</p>
+        </div>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="uc">UC</label>
+                <input id="uc" type="text" class="input-field" value="@UnidadeAtual" disabled>
+
+            </div>
+            <div class="form-group">
+                <label for="vuc">VUC</label>
+                <input id="vuc" type="text" class="input-field" @bind="UcLida" @bind:after="@VerificarUc" @ref=vUcLida>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button class="btn" @onclick="VerificarUc">Verificar</button>
+            <button class="btn" @onclick="Voltar">Voltar</button>
+        </div>
+    </div>
+</body>
+</html>
+
+@code {
+    private FilaSeparacao dados = new FilaSeparacao();
+    private string UcLida = string.Empty;
+    private ElementReference vUcLida;
+    private string MensagemErro = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            dados = await Http.GetFromJsonAsync<FilaSeparacao>("https://api.npoint.io/e38af607c457b2a3972f") ?? new FilaSeparacao();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao carregar dados da API: {ex.Message}");
+        }
+    }
+
+    private string UnidadeAtual => dados.OrdensDeSeparacao.Any() && Sequencial.UnidadeIndex < dados.OrdensDeSeparacao[0].Unidades.Count
+        ? dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Codigo : string.Empty;
+
+    private async Task VerificarUc()
+    {
+        if (UcLida == UnidadeAtual)
+        {
+            MensagemErro = string.Empty;
+            Sequencial.ProdutoIndex++;
+            if (Sequencial.ProdutoIndex >= dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos.Count)
+            {
+                Sequencial.ProdutoIndex = 0;
+                Sequencial.UnidadeIndex++;
+
+                // Se todos os produtos e unidades foram processados, reinicie ou finalize
+                if (Sequencial.UnidadeIndex >= dados.OrdensDeSeparacao[0].Unidades.Count)
+                {
+                    navManager.NavigateTo("/fila");
+                    return;
+                }
+            }
+            navManager.NavigateTo("/conferir-produto");
+        }
+        else
+        {
+            MensagemErro = "UC Divergente";
+            UcLida = string.Empty;
+            await vUcLida.FocusAsync();
+        }
+    }
+
+    // Método para voltar à tela anterior
+    private void Voltar()
+    {
+        navManager.NavigateTo("/conferir-quantidade");
+    }
+}

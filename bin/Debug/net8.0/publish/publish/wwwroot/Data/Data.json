@@ -1,0 +1,241 @@
+﻿{
+  "OrdensDeSeparacao": [
+    {
+      "Unidades": [
+        {
+          "Codigo": "9000301653",
+          "Produtos": [
+            {
+              "PartNumber": "1615785",
+              "DescricaoBreve": "Anel de retencao",
+              "Quantidade": 1,
+              "Local": "80H32D01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1616060",
+              "DescricaoBreve": "Sens/selet movim- Eixo de saida",
+              "Quantidade": 1,
+              "Local": "80H32D02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1626237",
+              "DescricaoBreve": "Reservat liq arrefec",
+              "Quantidade": 1,
+              "Local": "50B97B01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1666067",
+              "DescricaoBreve": "Macaneta",
+              "Quantidade": 1,
+              "Local": "50C24B01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1698180",
+              "DescricaoBreve": "Tampa de protecao",
+              "Quantidade": 1,
+              "Local": "60A03G01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1797650",
+              "DescricaoBreve": "BOMBA DE ELEVAÇÃO DE COMBUSTÍVEL",
+              "Quantidade": 1,
+              "Local": "80E21C02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1812162",
+              "DescricaoBreve": "Correia V multip",
+              "Quantidade": 2,
+              "Local": "50C16C02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1819532",
+              "DescricaoBreve": "Conj aneis pistao . .",
+              "Quantidade": 4,
+              "Local": "50G18E03",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1843244",
+              "DescricaoBreve": "Camisa do cilindro",
+              "Quantidade": 4,
+              "Local": "50C65D02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1843659",
+              "DescricaoBreve": "Elem filtro liq arrf",
+              "Quantidade": 2,
+              "Local": "50B104B01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1876189",
+              "DescricaoBreve": "Anel ved,virabreq",
+              "Quantidade": 6,
+              "Local": "50D62E01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1876190",
+              "DescricaoBreve": "Anel ved,virabreq",
+              "Quantidade": 5,
+              "Local": "50D45F01",
+              "Und": "CDA"
+            }
+          ]
+        },
+        {
+          "Codigo": "9000301654",
+          "Produtos": [
+            {
+              "PartNumber": "1886676",
+              "DescricaoBreve": "Folha da dobradica",
+              "Quantidade": 1,
+              "Local": "50F48G02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1890049",
+              "DescricaoBreve": "Bloco silenciador",
+              "Quantidade": 2,
+              "Local": "50D67B01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1893397",
+              "DescricaoBreve": "Correia V multip",
+              "Quantidade": 1,
+              "Local": "50E30B01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1905000",
+              "DescricaoBreve": "Tubo injecao combust",
+              "Quantidade": 1,
+              "Local": "50E20E01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1922496",
+              "DescricaoBreve": "cartucho filtro oleo",
+              "Quantidade": 1,
+              "Local": "50B109B01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1948921",
+              "DescricaoBreve": "cartucho filtro oleo",
+              "Quantidade": 8,
+              "Local": "50B82D01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "1982821",
+              "DescricaoBreve": "Torneira dren-bujao Plugue",
+              "Quantidade": 4,
+              "Local": "80B35C01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2018671",
+              "DescricaoBreve": "anel O . .",
+              "Quantidade": 10,
+              "Local": "80G10C01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2025409",
+              "DescricaoBreve": "anel O",
+              "Quantidade": 2,
+              "Local": "80P38G01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2030450",
+              "DescricaoBreve": "Conj.plato embreagem",
+              "Quantidade": 1,
+              "Local": "30D05G01",
+              "Und": "CDA"
+            }
+
+          ]
+        },
+        {
+          "Codigo": "9000301655",
+          "Produtos": [
+            {
+              "PartNumber": "2104017",
+              "DescricaoBreve": "Peca de fixacao",
+              "Quantidade": 10,
+              "Local": "80E24C02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2114704",
+              "DescricaoBreve": "Spoiler,corner",
+              "Quantidade": 1,
+              "Local": "30C31H02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2121501",
+              "DescricaoBreve": "Tubo liq arrefec",
+              "Quantidade": 3,
+              "Local": "80E11C01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2121502",
+              "DescricaoBreve": "Tubo liq arrefec",
+              "Quantidade": 3,
+              "Local": "80E11D02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2124583",
+              "DescricaoBreve": "Tubo liq arrefec",
+              "Quantidade": 1,
+              "Local": "50G28G01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2194210",
+              "DescricaoBreve": "Tubo liq arrefec",
+              "Quantidade": 1,
+              "Local": "80A02C01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2234788",
+              "DescricaoBreve": "Elemento filtro oleo .",
+              "Quantidade": 4,
+              "Local": "50B105B01",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2234907RN",
+              "DescricaoBreve": "Compressor de ar",
+              "Quantidade": 1,
+              "Local": "30C55F02",
+              "Und": "CDA"
+            },
+            {
+              "PartNumber": "2277235",
+              "DescricaoBreve": "Tampa com rosca Filtro de oleo",
+              "Quantidade": 1,
+              "Local": "50F47E04",
+              "Und": "CDA"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

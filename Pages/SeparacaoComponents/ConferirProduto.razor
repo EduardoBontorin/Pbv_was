@@ -1,0 +1,113 @@
+﻿@page "/conferir-produto"
+@using System.Net.Http.Json
+@using WebAssemby_PickingByVoice.Models
+@inject NavigationManager navManager
+@inject HttpClient Http
+
+<PageTitle>Conferir Produto</PageTitle>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página SAP</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+
+        <h3>Conferir Produto</h3>
+        <div class="notification" style="color: red;" hidden="@(string.IsNullOrEmpty(MensagemErro))">
+            <p id="msgErro">@MensagemErro</p>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="pdor">PDOr</label>
+                <input id="posicao" type="text" class="input-field" value="@PosicaoAtual" disabled>
+
+                <label for="vposicao">V</label>
+                <input id="vposicao" type="text" class="input-field" style="width:10px" @bind="PosicaoLida" >
+
+            </div>
+
+            <div class="form-group">
+                <label for="prod">Prod.</label>
+                <input id="prod" type="text" class="input-field" value="@PartNumberAtual" disabled>
+
+                <label for="prod">Desc.</label>
+                <input id="desc" type="text" class="input-field" value="@DescricaoAtual" disabled>
+
+                <label for="vprod">VProd</label>
+                <input id="vprod" type="text" class="input-field" @bind="ProdLido" @bind:after="@VerificarProduto" @ref="vprodInput">
+
+                @* <RadzenTextBox id="vprod" class="input-field" @bind-value=@ProdLido Change=VerificarProduto @ref=vprodInput></RadzenTextBox> *@
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn" @onclick="VerificarProduto">Verificar</button>
+                <button class="btn" @onclick="Voltar">Voltar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+@code {
+    private FilaSeparacao dados = new FilaSeparacao();
+    private string PosicaoLida = string.Empty;
+    private string ProdLido = string.Empty;
+
+    private ElementReference vprodInput;
+
+    string MensagemErro = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            dados = await Http.GetFromJsonAsync<FilaSeparacao>("https://api.npoint.io/e38af607c457b2a3972f") ?? new FilaSeparacao();
+            vprodInput.FocusAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao carregar dados da API: {ex.Message}");
+        }
+    }
+
+    private string PosicaoAtual => dados.OrdensDeSeparacao.Any() && Sequencial.UnidadeIndex < dados.OrdensDeSeparacao[0].Unidades.Count
+       && Sequencial.ProdutoIndex < dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos.Count
+       ? dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos[Sequencial.ProdutoIndex].Local : string.Empty;
+
+    private string PartNumberAtual => dados.OrdensDeSeparacao.Any() && Sequencial.UnidadeIndex < dados.OrdensDeSeparacao[0].Unidades.Count
+        && Sequencial.ProdutoIndex < dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos.Count
+        ? dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos[Sequencial.ProdutoIndex].PartNumber
+        : string.Empty;
+    private string DescricaoAtual => dados.OrdensDeSeparacao.Any() && Sequencial.UnidadeIndex < dados.OrdensDeSeparacao[0].Unidades.Count
+    && Sequencial.ProdutoIndex < dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos.Count
+    ? dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos[Sequencial.ProdutoIndex].DescricaoBreve
+    : string.Empty;
+
+    private async Task VerificarProduto()
+    {
+        if (ProdLido == PartNumberAtual)
+        {
+            MensagemErro = string.Empty;
+            navManager.NavigateTo("/conferir-quantidade"); // Navega para a próxima etapa
+        }
+        else
+        {
+            vprodInput.FocusAsync();
+            MensagemErro = "Produto nao confere";
+            ProdLido = string.Empty;
+            await Task.Delay(4000);
+            MensagemErro = string.Empty;
+        }
+    }
+
+    private void Voltar()
+    {
+        navManager.NavigateTo("/separacao");
+    }
+}

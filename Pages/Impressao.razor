@@ -1,0 +1,100 @@
+﻿@page "/impressao"
+<!DOCTYPE html>
+<PageTitle>Impressao</PageTitle>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Buttons F1 and F2 -->
+        <div class="action-buttons">
+            <button class="btn">F1 DetOD</button>
+            <button class="btn">F2 Criar UC</button>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-group">
+            <label for="input1">Nº AE</label>
+            <input id="input1" type="text" class="input-field" value="6001150036">
+            <label for="input2">Wave Type</label>
+            <input id="input2" type="text" class="input-field" value="WDLY">
+        </div>
+
+        <div class="form-group">
+            <label for="input3">AA</label>
+            <input id="input3" type="text" class="input-field" value="5000">
+            <label for="input4">UCsPln</label>
+            <input id="input4" type="text" class="input-field" value="24">
+        </div>
+
+        <div class="form-group">
+            <label for="input5">UC de pickingMat.pick.</label>
+            <input id="input5" type="text" class="input-field" value="">
+            <label for="input6">PR</label>
+            <input id="input6" type="text" class="input-field" value="V">
+        </div>
+
+        <!-- Table Section -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>UC</th>
+                    <th>PR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9000301653</td>
+                    <td class="highlight">TT02</td>
+                </tr>
+                <tr>
+                    <td>9000301654</td>
+                    <td class="highlight">TT02</td>
+                </tr>
+                <tr>
+                    <td>9000301655</td>
+                    <td class="highlight">TT02</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bottom Buttons -->
+        <div class="action-buttons">
+            <button onclick="showToast()" id="btn_imprimir" class="btn">F10 Impressão</button>
+            <button id="btn_avancar" @onclick="navegar" class="btn">F4 Avançar</button>
+        </div>
+        
+        <div id="toast" class="toast hidden">
+            Impressão iniciada com sucesso!
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function showToast() {
+        const toast = document.getElementById("toast");
+        toast.classList.remove("hidden");
+        toast.classList.add("show");
+
+        // Oculta o toast após 3 segundos
+        setTimeout(() => {
+            toast.classList.remove("show");
+            toast.classList.add("hidden");
+        }, 3000);
+    }
+</script>
+@code
+{
+    public void navegar()
+    {
+        navManager.NavigateTo("/Conferir-Produto");
+    }
+}

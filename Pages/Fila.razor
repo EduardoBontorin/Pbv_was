@@ -1,0 +1,32 @@
+﻿@page "/fila"
+<PageTitle>Fila</PageTitle>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="form-group">
+            <label for="fila">Fila</label>
+            <input @onchange="Navegar" type="text" id="btn_fila" class="input-field" />
+            <div class="action-icons">
+                
+                <button @onclick="Navegar" id="btn_confimar" class="icon-button success">✔️</button>
+                <button  id="btn_voltar" class="icon-button error">❌</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+@code
+{
+    public void Navegar()
+    {
+        navManager.NavigateTo("/impressao");
+    }
+}

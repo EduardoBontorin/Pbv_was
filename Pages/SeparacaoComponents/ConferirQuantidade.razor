@@ -1,0 +1,103 @@
+﻿@page "/conferir-quantidade"
+@using System.Text.RegularExpressions
+@using WebAssemby_PickingByVoice.Models
+@inject NavigationManager navManager
+@inject HttpClient Http
+
+<PageTitle>Conferir Quantidade</PageTitle>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página SAP</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="content">
+        <h3>Conferir Quantidade</h3>
+        <div class="notification" style="color: red;" hidden="@(string.IsNullOrEmpty(MensagemErro))">
+            <p id="msgErro">@MensagemErro</p>
+        </div>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="qtde">QtRe</label>
+                <input id="qtde" type="text" class="input-field" value="@QuantidadeAtual" disabled>
+            </div>
+            <div class="form-group">
+                <label for="vqtde">VQtde</label>
+                    <input id="vqtde" type="text" class="input-field" @bind="QtdColetada" @bind:after="@VerificarQuantidade" @ref="vQtdColetada" />
+            </div>
+
+           
+
+            <div class="form-group">
+                <label for="und">Und</label>
+                <input id="und" type="text" class="input-field" value="@Unidade">
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button id="btn-verificar" class="btn" @onclick="VerificarQuantidade">Verificar</button>
+            <button class="btn" @onclick="Voltar">Voltar</button>
+        </div>
+    </div>
+</body>
+</html>
+
+@code {
+    private FilaSeparacao dados = new FilaSeparacao();
+    private string QtdColetada = string.Empty;
+    private ElementReference vQtdColetada;
+    string MensagemErro = string.Empty;
+    
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+
+            dados = await Http.GetFromJsonAsync<FilaSeparacao>("https://api.npoint.io/e38af607c457b2a3972f") ?? new FilaSeparacao();
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao carregar dados da API: {ex.Message}");
+        }
+    }
+
+    private int QuantidadeAtual => dados.OrdensDeSeparacao.Any() && Sequencial.UnidadeIndex < dados.OrdensDeSeparacao[0].Unidades.Count
+        && Sequencial.ProdutoIndex < dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos.Count
+        ? dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos[Sequencial.ProdutoIndex].Quantidade
+        : 0;
+    private string Unidade => dados.OrdensDeSeparacao.Any() && Sequencial.UnidadeIndex < dados.OrdensDeSeparacao[0].Unidades.Count
+       && Sequencial.ProdutoIndex < dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos.Count
+       ? dados.OrdensDeSeparacao[0].Unidades[Sequencial.UnidadeIndex].Produtos[Sequencial.ProdutoIndex].Und
+       : string.Empty;
+
+    private async Task VerificarQuantidade()
+    {
+        // Limpa o valor de QtdColetada removendo espaços, aspas e caracteres não numéricos
+        string cleanedQtdColetada = Regex.Replace(QtdColetada, @"[^\d]", ""); // Remove tudo que não for dígito
+        Console.WriteLine($"Valor tratado de QtdColetada: {cleanedQtdColetada}");
+
+        // Tenta fazer o parse do valor tratado
+        if (int.TryParse(cleanedQtdColetada, out int qtd) && qtd == QuantidadeAtual)
+        {
+            MensagemErro = string.Empty;
+            navManager.NavigateTo("/conferir-uc");
+        }
+        else
+        {
+            MensagemErro = "Quantidade nao confere.";
+            QtdColetada = string.Empty; // Limpa o campo de entrada
+            vQtdColetada.FocusAsync();
+            StateHasChanged(); // Atualiza o estado da interface
+        }
+    }
+
+
+    private void Voltar()
+    {
+        navManager.NavigateTo("/conferir-produto");
+    }
+}

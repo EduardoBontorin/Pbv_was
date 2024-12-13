@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\bin\\Release\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\obj\\Release\\net8.0\\compressed\\ksle77p70y.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\obj\\Release\\net8.0\\scopedcss\\bundle\\WebAssemby-PickingByVoice.styles.css",
+      "PackagePath": "staticwebassets\\WebAssemby-PickingByVoice.styles.css"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\Data\\Data.json",
+      "PackagePath": "staticwebassets\\Data\\Data.json"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\dev\\WebAssemby-PickingByVoice\\WebAssemby-PickingByVoice\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.WebAssemby-PickingByVoice.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.WebAssemby-PickingByVoice.props",
+      "PackagePath": "build\\WebAssemby-PickingByVoice.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebAssemby-PickingByVoice.props",
+      "PackagePath": "buildMultiTargeting\\WebAssemby-PickingByVoice.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebAssemby-PickingByVoice.props",
+      "PackagePath": "buildTransitive\\WebAssemby-PickingByVoice.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

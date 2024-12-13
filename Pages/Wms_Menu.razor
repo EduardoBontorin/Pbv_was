@@ -1,0 +1,32 @@
+﻿@page "/wms_menu"
+<PageTitle>Wms_menu</PageTitle>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página SAP</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<div class="content">
+    <div class="card">
+        <h4 class="card-title">Ações Disponíveis</h4>
+        <div class="button-list-vertical">
+            <button id="btn_separar" class="btn" @onclick="Separar">Separar</button>
+            <button id="btn_alimentar" class="btn" @onclick="Alimentar">Alimentar</button>
+            <button id="btn_outro" class="btn">Outro</button>
+        </div>
+    </div>
+</div>
+</html>
+
+@code {
+    public void Separar()
+    {
+        navManager.NavigateTo("/fila");
+    }
+    public void Alimentar()
+    {
+        navManager.NavigateTo("/Alimentar");
+    }
+}

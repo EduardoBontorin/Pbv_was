@@ -1,0 +1,83 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = WebAssemby-PickingByVoice
+build_property.RootNamespace = WebAssemby-PickingByVoice
+build_property.ProjectDir = C:\dev\WebAssemby-PickingByVoice\WebAssemby-PickingByVoice\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\dev\WebAssemby-PickingByVoice\WebAssemby-PickingByVoice
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/Alimentar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxpbWVudGFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/Fila.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/FinalizarPicking.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmluYWxpemFyUGlja2luZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/Impressao.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1wcmVzc2FvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/SeparacaoComponents/ConferirProduto.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VwYXJhY2FvQ29tcG9uZW50c1xDb25mZXJpclByb2R1dG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/SeparacaoComponents/ConferirQuantidade.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VwYXJhY2FvQ29tcG9uZW50c1xDb25mZXJpclF1YW50aWRhZGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/SeparacaoComponents/ConferirUc.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VwYXJhY2FvQ29tcG9uZW50c1xDb25mZXJpclVjLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Pages/Wms_Menu.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV21zX01lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-21msxwmee8
+
+[C:/dev/WebAssemby-PickingByVoice/WebAssemby-PickingByVoice/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-oj83jlprbp
