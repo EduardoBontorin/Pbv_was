@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAssemby-PickingByVoice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61cd98113378f5653562ef426b795a7e3d637c61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ac6c7deab343e5a41cdd6854904719131ef3b41")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAssemby-PickingByVoice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAssemby-PickingByVoice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
